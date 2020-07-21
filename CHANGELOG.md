@@ -4,6 +4,14 @@ All notable changes to the "react-native-snippets-full" extension will be docume
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [0.0.1]
 
-- Initial release
+- Initial release React Native Snippets Full
+
+## [0.0.4]
+
+- Add hook, typescript
+
+## [0.0.5]
+
+- Add class component

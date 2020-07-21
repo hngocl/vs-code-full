@@ -2,11 +2,11 @@
     "name": "react-native-snippets-full",
     "displayName": "React Native Snippets Full",
     "description": "Very many shortcut for React Native Dev",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "publisher": "hngocl",
     "icon": "images/logo.png",
     "engines": {
-        "vscode": "^1.47.0"
+        "vscode": "^1.34.0"
     },
     "categories": [
         "Snippets"
@@ -63,7 +63,7 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.47.0",
+        "@types/vscode": "^1.34.0",
         "@types/glob": "^7.1.1",
         "@types/mocha": "^7.0.2",
         "@types/node": "^13.11.0",
