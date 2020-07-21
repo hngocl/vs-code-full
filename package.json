@@ -2,7 +2,7 @@
     "name": "react-native-snippets-full",
     "displayName": "React Native Snippets Full",
     "description": "Very many shortcut for React Native Dev",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "publisher": "hngocl",
     "icon": "images/logo.png",
     "engines": {
@@ -10,6 +10,9 @@
     },
     "categories": [
         "Snippets"
+    ],
+    "extensionKind": [
+        "ui"
     ],
     "keywords": [
         "snippets",
@@ -37,12 +40,12 @@
         ],
         "keybindings": [
             {
-              "command": "extension.snippetSearch",
-              "key": "ctrl+alt+r",
-              "mac": "shift+cmd+r",
-              "when": "editorTextFocus"
+                "command": "extension.snippetSearch",
+                "key": "ctrl+alt+r",
+                "mac": "shift+cmd+r",
+                "when": "editorTextFocus"
             }
-          ],
+        ],
         "snippets": [
             {
                 "language": "javascript",
