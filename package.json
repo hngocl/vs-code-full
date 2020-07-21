@@ -2,7 +2,7 @@
     "name": "react-native-snippets-full",
     "displayName": "React Native Snippets Full",
     "description": "Very many shortcut for React Native Dev",
-    "version": "0.0.5",
+    "version": "0.0.8",
     "publisher": "hngocl",
     "icon": "images/logo.png",
     "engines": {
@@ -24,17 +24,25 @@
         "url": "https://github.com/hngocl/vs-code-full"
     },
     "license": "MIT",
-    "activationEvents": [
-        "onCommand:react-native-snippets-full.helloWorld"
-    ],
     "main": "./out/extension.js",
+    "activationEvents": [
+        "onCommand:extension.snippetSearch"
+    ],
     "contributes": {
         "commands": [
             {
-                "command": "react-native-snippets-full.helloWorld",
-                "title": "Hello World"
+                "command": "extension.snippetSearch",
+                "title": "React Native Snippet search"
             }
         ],
+        "keybindings": [
+            {
+              "command": "extension.snippetSearch",
+              "key": "ctrl+alt+r",
+              "mac": "shift+cmd+r",
+              "when": "editorTextFocus"
+            }
+          ],
         "snippets": [
             {
                 "language": "javascript",

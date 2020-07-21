@@ -12,6 +12,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Add hook, typescript
 
-## [0.0.5]
+## [0.0.7]
 
 - Add class component
+
+## [0.0.8]
+
+- Fix bug

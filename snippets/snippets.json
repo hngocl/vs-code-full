@@ -347,14 +347,34 @@
             "}"
         ]
     },
+    "Redux Reducer Immer": {
+        "prefix": "imreducer",
+        "body": [
+            "import { produce } from 'immer'",
+            "import * as Action from '${1}';",
+            "",
+            "const initialState = {",
+            "",
+            "};",
+            "export default",
+            "\tproduce((draftState, { type, payload }) => {",
+            "\t\tswitch (type) {",
+            "\t\t\tdefault:",
+            "\t\t\t\tbreak;",
+            "\t\t}",
+            "\t}, initialState)"
+        ]
+    },
     "Typescript Redux Reducer": {
         "prefix": "rxtreducer",
         "body": [
-            "interface ${1:${TM_FILENAME_BASE}}State {",
+            "import * as Action from '${1}';",
+            "",
+            "interface ${2:${TM_FILENAME_BASE}}State {",
             "",
             "}",
             "",
-            "const initialState: CState = {",
+            "const initialState: ${2:${TM_FILENAME_BASE}}State = {",
             "",
             "}",
             "",
@@ -362,10 +382,10 @@
             "\ttype: keyof typeof Action;",
             "\tpayload: any;",
             "}",
-            "export default (state = initialState, { type, payload }: ActionProps): ${1:${TM_FILENAME_BASE}}State => {",
+            "export default (state = initialState, { type, payload }: ActionProps): ${2:${TM_FILENAME_BASE}}State => {",
             "\tswitch (type) {",
             "",
-            "\t\tcase ${2:typeName}:",
+            "\t\tcase ${3:typeName}:",
             "\t\t\treturn { ...state, ...payload }",
             "",
             "\t\tdefault:",
@@ -378,12 +398,12 @@
         "prefix": "timreducer",
         "body": [
             "import { produce } from 'immer'",
-            "import * as Action from '${1:''}';",
+            "import * as Action from '${1}';",
             "",
-            "export interface ${1:${TM_FILENAME_BASE}}State {",
+            "export interface ${2:${TM_FILENAME_BASE}}State {",
             "",
             "}",
-            "const initialAppState: ${1:${TM_FILENAME_BASE}}State = {",
+            "const initialState: ${2:${TM_FILENAME_BASE}}State = {",
             "",
             "};",
             "interface ActionProps {",
@@ -391,12 +411,12 @@
             "\tpayload: any;",
             "}",
             "export default",
-            "\tproduce((draftState: ${1:${TM_FILENAME_BASE}}State, { type, payload }: ActionProps) => {",
+            "\tproduce((draftState: ${2:${TM_FILENAME_BASE}}State, { type, payload }: ActionProps) => {",
             "\t\tswitch (type) {",
             "\t\t\tdefault:",
             "\t\t\t\tbreak;",
             "\t\t}",
-            "\t}, initialAppState)"
+            "\t}, initialState)"
         ]
     },
     "Typescript interface": {
