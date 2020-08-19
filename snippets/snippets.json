@@ -266,7 +266,7 @@
         "prefix": "rnhms",
         "body": [
             "import React, { memo } from 'react'",
-            "import { View, Text } from 'react-native'",
+            "import { View, Text, StyleSheet } from 'react-native'",
             "",
             "const styles = StyleSheet.create({",
             "",
@@ -308,7 +308,7 @@
         "prefix": "rthms",
         "body": [
             "import React, { memo } from 'react'",
-            "import { View, Text } from 'react-native'",
+            "import { View, Text, StyleSheet } from 'react-native'",
             "",
             "const styles = StyleSheet.create({",
             "",
@@ -1017,5 +1017,22 @@
             ""
         ],
         "description": "Adds a default constructor for it('', () => {})the class that contains props as arguments"
+    },
+    "styleCenter": {
+        "prefix": "alj",
+        "body": [
+            "justifyContent: 'center',",
+            "alignItems: 'center',"
+        ]
+    },
+    "initSaga": {
+        "prefix": "rnsg",
+        "body": [
+            "import {$1} from 'redux-saga/effects';",
+            "",
+            "export function* ${2:functionName}($3){",
+            "$4",
+            "}"
+        ]
     }
 }
