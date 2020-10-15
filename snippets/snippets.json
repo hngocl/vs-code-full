@@ -304,6 +304,26 @@
             "export const ${1:${TM_FILENAME_BASE}} = memo(${1:${TM_FILENAME_BASE}}Component,${2:isEqual})"
         ]
     },
+    "React, Typescript, Hook, memo, type, navigation  ": {
+        "prefix": "rtnhm",
+        "body": [
+            "import React, { memo } from 'react'",
+            "import { View, Text } from 'react-native'",
+            "import {  StackScreenProps } from '@react-navigation/stack'",
+            "",
+            "type ${1:${TM_FILENAME_BASE}}Props = StackScreenProps<${2},${3}>",
+            "",
+            "const ${1:${TM_FILENAME_BASE}}Component = ({ navigation, route }:${1:${TM_FILENAME_BASE}}Props) => {",
+            "\treturn (",
+            "\t\t<View>",
+            "\t\t\t<Text></Text>",
+            "\t\t</View>",
+            "\t)",
+            "}",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}} = memo(${1:${TM_FILENAME_BASE}}Component,${2:isEqual})"
+        ]
+    },
     "React,Typescript, Hook, memo, interface, style  ": {
         "prefix": "rthms",
         "body": [
