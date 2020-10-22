@@ -311,7 +311,7 @@
             "import { View, Text } from 'react-native'",
             "import {  StackScreenProps } from '@react-navigation/stack'",
             "",
-            "type ${1:${TM_FILENAME_BASE}}Props = StackScreenProps<${2},${3}>",
+            "type ${1:${TM_FILENAME_BASE}}Props = StackScreenProps<${3},${4}>",
             "",
             "const ${1:${TM_FILENAME_BASE}}Component = ({ navigation, route }:${1:${TM_FILENAME_BASE}}Props) => {",
             "\treturn (",
