@@ -464,7 +464,7 @@
         ]
     },
     "export Typescript interface": {
-        "prefix": "erni",
+        "prefix": "exi",
         "body": [
             "export interface ${1:${TM_FILENAME_BASE}} {",
             "",
@@ -480,7 +480,7 @@
     "Typescript Redux useSelector": {
         "prefix": "tsuseSelector",
         "body": [
-            "const {${2:state}} = useSelector<${3:any}>(x => x.${1:state});"
+            "const {${3:state}} = useSelector<${1:any}>(x => x.${2:state});"
         ]
     },
     "redux useDispatch": {
@@ -493,11 +493,11 @@
         "prefix": "useImperativeHandle",
         "body": [
             "useImperativeHandle(",
-            "ref,",
-            "() => {",
-            "\thandler",
-            "},",
-            "[input],",
+            "\tref,",
+            "\t() => {",
+            "\t\t${2:handler}",
+            "\t},",
+            "\t[${1:deps}],",
             ")"
         ]
     },
@@ -510,7 +510,7 @@
     "Typescript React hook state": {
         "prefix": "useStateTs",
         "body": [
-            "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${3:any}>(${2:initialState})"
+            "const [${2:state}, set${2/(.*)/${2:/capitalize}/}] = useState<${1:any}>(${3:initialState})"
         ]
     },
     "useEffect": {
@@ -521,7 +521,7 @@
             "\treturn () => {",
             "\t\t${3:cleanup}",
             "\t}",
-            "}, [${1:input}])"
+            "}, [${1:deps}])"
         ]
     },
     "useContext": {
@@ -539,18 +539,15 @@
     "useCallback": {
         "prefix": "useCallback",
         "body": [
-            "useCallback(",
-            "\t() => {",
-            "\t\t${2:callback}",
-            "\t},",
-            "\t[${1:input}],",
-            ")"
+            "useCallback(() => {",
+            "\t$2",
+            "}, [${1:deps}]);"
         ]
     },
     "useMemo": {
         "prefix": "useMemo",
         "body": [
-            "useMemo(() => ${1:function}, ${2:input})"
+            "useMemo(() => ${1:function}, ${2:deps})"
         ]
     },
     "useRef": {
@@ -562,18 +559,18 @@
     "Typescript useRef": {
         "prefix": "tsuseRef",
         "body": [
-            "const ${1:ref} = useRef<${3:any}>(${2:initialValue})"
+            "const ${3:ref} = useRef<${1:any}>(${2:initialValue})"
         ]
     },
     "useLayoutEffect": {
         "prefix": "useLayoutEffect",
         "body": [
             "useLayoutEffect(() => {",
-            "\t${1:effect}",
+            "\t${2:effect}",
             "\treturn () => {",
             "\t\t${2:cleanup}",
             "\t};",
-            "}, [${3:input}])"
+            "}, [${1:input}])"
         ]
     },
     "useDebugValue": {
