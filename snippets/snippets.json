@@ -510,7 +510,7 @@
     "Typescript React hook state": {
         "prefix": "useStateTs",
         "body": [
-            "const [${2:state}, set${2/(.*)/${2:/capitalize}/}] = useState<${1:any}>(${3:initialState})"
+            "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:any}>(${3:initialState})"
         ]
     },
     "useEffect": {
