@@ -550,6 +550,12 @@
             "const ${1:memo} = useMemo(() => ${2:function}, [${3:deps}])"
         ]
     },
+    "tuseMemo": {
+        "prefix": "useMemo",
+        "body": [
+            "const ${2:memo} = useMemo<${1:any}>(() => ${3:function}, [${4:deps}])"
+        ]
+    },
     "useRef": {
         "prefix": "useRef",
         "body": [
