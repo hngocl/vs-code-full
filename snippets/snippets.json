@@ -508,7 +508,7 @@
         ]
     },
     "Typescript React hook state": {
-        "prefix": "useStateTs",
+        "prefix": "tuseState",
         "body": [
             "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:any}>(${3:initialState})"
         ]
@@ -539,15 +539,15 @@
     "useCallback": {
         "prefix": "useCallback",
         "body": [
-            "useCallback(() => {",
-            "\t$2",
-            "}, [${1:deps}]);"
+            "const ${1:callback} = useCallback(() => {",
+            "\t$3",
+            "}, [${2:deps}]);"
         ]
     },
     "useMemo": {
         "prefix": "useMemo",
         "body": [
-            "useMemo(() => ${1:function}, ${2:deps})"
+            "const ${1:memo} = useMemo(() => ${2:function}, [${3:deps}])"
         ]
     },
     "useRef": {
@@ -557,9 +557,9 @@
         ]
     },
     "Typescript useRef": {
-        "prefix": "tsuseRef",
+        "prefix": "tuseRef",
         "body": [
-            "const ${3:ref} = useRef<${1:any}>(${2:initialValue})"
+            "const ${2:ref} = useRef<${1:any}>(${3:initialValue})"
         ]
     },
     "useLayoutEffect": {
